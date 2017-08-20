@@ -38,15 +38,18 @@ namespace ExcelApplication1
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             
-            System.Windows.Forms.FolderBrowserDialog fb = new System.Windows.Forms.FolderBrowserDialog();
+            //System.Windows.Forms.FolderBrowserDialog fb = new System.Windows.Forms.FolderBrowserDialog();
+            System.Windows.Forms.OpenFileDialog fb = new System.Windows.Forms.OpenFileDialog();
             if (fb.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //选择的文件夹路径
-                selectedPath = fb.SelectedPath + "/";
-                this.FindFile(selectedPath);
-                this.textBlock2.Text = "你选择的目录为:" + selectedPath;
-                this.textBlock3.Text = "文件数量为:" + excelFileList.Count;
-                listBox1.ItemsSource = excelFileList;
+                selectedPath = fb.FileName.TrimEnd(fb.SafeFileName.ToCharArray());
+                refreshData();
+                //selectedPath = fb.SelectedPath + "/";
+                //this.FindFile(selectedPath);
+                //this.textBlock2.Text = "你选择的目录为:" + selectedPath;
+                //this.textBlock3.Text = "文件数量为:" + excelFileList.Count;
+                //listBox1.ItemsSource = excelFileList;
             }
         }
 

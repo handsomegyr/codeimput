@@ -1,0 +1,17 @@
+I:\business\learn-dotnet\codeimput\bin\Release\CodeImport.exe
+I:\business\learn-dotnet\codeimput\bin\Release\MongoDB.Bson.dll
+I:\business\learn-dotnet\codeimput\bin\Release\MongoDB.Driver.dll
+I:\business\learn-dotnet\codeimput\bin\Release\Newtonsoft.Json.dll
+I:\business\learn-dotnet\codeimput\bin\Release\MongoDB.Bson.xml
+I:\business\learn-dotnet\codeimput\bin\Release\MongoDB.Driver.xml
+I:\business\learn-dotnet\codeimput\bin\Release\Newtonsoft.Json.xml
+I:\business\learn-dotnet\codeimput\obj\x86\Release\MainWindow.baml
+I:\business\learn-dotnet\codeimput\obj\x86\Release\SettingsWindow.baml
+I:\business\learn-dotnet\codeimput\obj\x86\Release\MainWindow.g.cs
+I:\business\learn-dotnet\codeimput\obj\x86\Release\SettingsWindow.g.cs
+I:\business\learn-dotnet\codeimput\obj\x86\Release\App.g.cs
+I:\business\learn-dotnet\codeimput\obj\x86\Release\CodeImport_MarkupCompile.cache
+I:\business\learn-dotnet\codeimput\obj\x86\Release\CodeImport.g.resources
+I:\business\learn-dotnet\codeimput\obj\x86\Release\CodeImport.Properties.Resources.resources
+I:\business\learn-dotnet\codeimput\obj\x86\Release\CodeImport.csproj.GenerateResource.Cache
+I:\business\learn-dotnet\codeimput\obj\x86\Release\CodeImport.exe

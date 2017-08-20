@@ -19,11 +19,7 @@ namespace ExcelApplication1
         {
             // Start the search for primes and wait.
             UTF8Encoding utf8 = new UTF8Encoding(false);
-            var targetPath = settings.TargetPath + "result.txt";
-            if (excelFileList.Count == 1)
-            {
-                targetPath = settings.TargetPath + excelFileList[0].Name;
-            }
+            var targetPath = settings.TargetPath;
             var writer = new StreamWriter(targetPath, false, utf8);
 
             try

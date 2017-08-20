@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -42,11 +43,14 @@ namespace ExcelApplication1
         }
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.FolderBrowserDialog fb = new System.Windows.Forms.FolderBrowserDialog();
+            //System.Windows.Forms.FolderBrowserDialog fb = new System.Windows.Forms.FolderBrowserDialog();
+            System.Windows.Forms.OpenFileDialog fb = new System.Windows.Forms.OpenFileDialog();
             if (fb.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //选择的文件夹路径
-                txtTargetPath.Text = fb.SelectedPath + "/";
+                //txtTargetPath.Text = fb.SelectedPath + "/";
+                FileInfo fi = new FileInfo(fb.FileName);
+                txtTargetPath.Text = fb.FileName.TrimEnd(fi.Extension.ToCharArray())+".sql";
             }
         }
 
@@ -100,8 +104,20 @@ namespace ExcelApplication1
             this.txtPrjcode.Text = objSettings.Prjcode;
             this.txtTargetPath.Text = objSettings.TargetPath;
             var ymd = DateTime.Now.ToString("yyyy-MM-dd");
-            this.txtStartTime.Text = (ymd+" 00:00:00");
-            this.txtEndTime.Text = (ymd + " 23:59:59");
+            if (string.IsNullOrEmpty(objSettings.StartTime)) {
+                this.txtStartTime.Text = (ymd + " 00:00:00");
+            } else {
+                this.txtStartTime.Text = objSettings.StartTime;
+            }
+
+            if (string.IsNullOrEmpty(objSettings.EndTime))
+            {
+                this.txtEndTime.Text = (ymd + " 23:59:59");
+            }
+            else
+            {
+                this.txtEndTime.Text = objSettings.EndTime;
+            }
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
